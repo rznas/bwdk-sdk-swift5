@@ -21,13 +21,13 @@ public struct OrderDetail: Codable, JSONEncodable, Hashable {
     public var merchantOrderId: String
     public var status: OrderStatusEnum
     public var statusDisplay: String
-    /** مجموع قیمت‌های اولیه تمام کالاها بدون تخفیف (به تومان) */
+    /** مجموع قیمت اولیه تمام کالاهای سفارش بدون تخفیف (به تومان) */
     public var mainAmount: Int
     /** قیمت نهایی قابل پرداخت توسط مشتری: مبلغ_اصلی - مبلغ_تخفیف + مبلغ_مالیات (به تومان) */
     public var finalAmount: Int
     /** مبلغ کل پرداخت شده توسط کاربر: مبلغ_نهایی + هزینه_ارسال (به تومان) */
     public var totalPaidAmount: Int
-    /** کل تخفیف اعمال شده بر سفارش (به تومان) */
+    /** مبلغ کل تخفیف اعمال شده بر سفارش (به تومان) */
     public var discountAmount: Int
     /** مبلغ کل مالیات برای سفارش (به تومان) */
     public var taxAmount: Int
@@ -55,18 +55,18 @@ public struct OrderDetail: Codable, JSONEncodable, Hashable {
     public var isPaid: Bool
     public var user: OrderUser
     public var payment: PaymentOrder
-    /** زمان آمادهسازی سفارش (به روز) */
+    /** Preparation time for the order (in days) */
     public var preparationTime: Int
-    /** وزن کل سفارش (بر حسب گرم) */
+    /** Total weight of the order (in grams) */
     public var weight: Double
     public var selectedShippingData: [String: AnyCodable]
-    /** کد مرجع منحصر به فرد برای پیگیری سفارش مشتری (فرمت: BD-XXXXXXXX) */
+    /** کد مرجع یکتا برای پیگیری سفارش مشتری (قالب: BD-XXXXXXXX) */
     public var referenceCode: String
     public var promotionDiscountAmount: Double
     public var promotionData: [String: AnyCodable]
-    /** مبلغ نشانه‌گذاری برای سفارش (به تومان) */
+    /** Markup amount for the order (in Tomans) */
     public var digipayMarkupAmount: Int
-    /** درصد کمیسیون نشانه‌گذاری برای سفارش (به درصد) */
+    /** Markup commission percentage for the order (in percent) */
     public var markupCommissionPercentage: Int
     public var previousStatus: OrderStatusEnum?
     public var previousStatusDisplay: String

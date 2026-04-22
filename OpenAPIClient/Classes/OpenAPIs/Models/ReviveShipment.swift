@@ -13,7 +13,7 @@ import AnyCodable
 public struct ReviveShipment: Codable, JSONEncodable, Hashable {
 
     public static let preparationTimeRule = NumericRule<Int>(minimum: 0, exclusiveMinimum: false, maximum: nil, exclusiveMaximum: false, multipleOf: nil)
-    /** زمان آمادهسازی سفارش (به روز) */
+    /** The preparation time for the order in days. */
     public var preparationTime: Int?
 
     public init(preparationTime: Int? = nil) {

@@ -5,7 +5,10 @@ Cartfile
 OpenAPIClient.podspec
 OpenAPIClient/Classes/OpenAPIs/APIHelper.swift
 OpenAPIClient/Classes/OpenAPIs/APIs.swift
-OpenAPIClient/Classes/OpenAPIs/APIs/DefaultAPI.swift
+OpenAPIClient/Classes/OpenAPIs/APIs/MerchantOrdersAPI.swift
+OpenAPIClient/Classes/OpenAPIs/APIs/MerchantWalletAPI.swift
+OpenAPIClient/Classes/OpenAPIs/APIs/OrderShippingAPI.swift
+OpenAPIClient/Classes/OpenAPIs/APIs/SellerProfileManagementAPI.swift
 OpenAPIClient/Classes/OpenAPIs/CodableHelper.swift
 OpenAPIClient/Classes/OpenAPIs/Configuration.swift
 OpenAPIClient/Classes/OpenAPIs/Extensions.swift
@@ -51,7 +54,6 @@ Package.swift
 README.md
 docs/AuthStatusResponse.md
 docs/BusinessAddress.md
-docs/DefaultAPI.md
 docs/DeliveryTimeRangeDisplay.md
 docs/ErrorEnum.md
 docs/GatewayTypeEnum.md
@@ -59,7 +61,9 @@ docs/Merchant.md
 docs/MerchantOrderCancelShipmentResponse.md
 docs/MerchantOrderRefundResponse.md
 docs/MerchantOrderReviveShipmentResponse.md
+docs/MerchantOrdersAPI.md
 docs/MerchantPaidOrderList.md
+docs/MerchantWalletAPI.md
 docs/NullEnum.md
 docs/Option.md
 docs/OrderCreate.md
@@ -67,6 +71,7 @@ docs/OrderCreateResponse.md
 docs/OrderDetail.md
 docs/OrderError.md
 docs/OrderItemCreate.md
+docs/OrderShippingAPI.md
 docs/OrderStatusEnum.md
 docs/OrderUser.md
 docs/Packing.md
@@ -75,6 +80,7 @@ docs/PaginatedOrderDetailList.md
 docs/PaymentOrder.md
 docs/RefundOrder.md
 docs/ReviveShipment.md
+docs/SellerProfileManagementAPI.md
 docs/ShippingMethod.md
 docs/ShippingTypeEnum.md
 docs/TypeNameEnum.md

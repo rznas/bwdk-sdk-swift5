@@ -36,9 +36,9 @@ public struct OrderItemCreate: Codable, JSONEncodable, Hashable {
     /** آدرس تصویر محصول */
     public var imageLink: String?
     public var options: [Option]
-    /** زمان آمادهسازی کالا (به روز) */
+    /** Preparation time for the item (in days) */
     public var preparationTime: Int? = 2
-    /** وزن کالا (بر حسب گرم) */
+    /** Weight of the item (in grams) */
     public var weight: Double?
 
     public init(name: String, primaryAmount: Int? = nil, amount: Int? = nil, count: Int, discountAmount: Int? = nil, taxAmount: Int? = nil, imageLink: String? = nil, options: [Option], preparationTime: Int? = 2, weight: Double? = nil) {

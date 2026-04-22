@@ -54,11 +54,11 @@ public struct OrderCreate: Codable, JSONEncodable, Hashable {
     public var user: Int?
     /** مهلت پرداخت (به عنوان Unix timestamp) قبل از اتمام سفارش */
     public var reservationExpiredAt: Int?
-    /** کد مرجع منحصر به فرد برای پیگیری سفارش مشتری (فرمت: BD-XXXXXXXX) */
+    /** کد مرجع یکتا برای پیگیری سفارش مشتری (قالب: BD-XXXXXXXX) */
     public var referenceCode: String
-    /** زمان آمادهسازی سفارش (به روز) */
+    /** Preparation time for the order (in days) */
     public var preparationTime: Int? = 2
-    /** وزن کل سفارش (بر حسب گرم) */
+    /** Total Weight of the order (in grams) */
     public var weight: Double?
 
     public init(merchantOrderId: String, merchantUniqueId: String, mainAmount: Int? = nil, finalAmount: Int? = nil, totalPaidAmount: Int? = nil, discountAmount: Int? = nil, taxAmount: Int? = nil, shippingAmount: Int? = nil, loyaltyAmount: Int? = nil, callbackUrl: String, destinationAddress: AnyCodable?, items: [OrderItemCreate], merchant: Int? = nil, sourceAddress: AnyCodable? = nil, user: Int?, reservationExpiredAt: Int? = nil, referenceCode: String, preparationTime: Int? = 2, weight: Double? = nil) {

@@ -12,7 +12,7 @@ import AnyCodable
 
 public struct AuthStatusResponse: Codable, JSONEncodable, Hashable {
 
-    /** وضعیت لاگین بودن */
+    /** Authentication status */
     public var isAuthenticated: Bool
 
     public init(isAuthenticated: Bool) {

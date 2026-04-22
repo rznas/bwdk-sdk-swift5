@@ -12,7 +12,7 @@ import AnyCodable
 
 public struct VerifyOrder: Codable, JSONEncodable, Hashable {
 
-    /** شناسه منحصر به فرد ارسال شده هنگام ایجاد سفارش برای تأیید اصالت سفارش */
+    /** شناسه منحصر به فرد ارسال شده هنگام ساخت سفارش برای تأیید اصالت سفارش */
     public var merchantUniqueId: String
 
     public init(merchantUniqueId: String) {

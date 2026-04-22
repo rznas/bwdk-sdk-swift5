@@ -19,26 +19,26 @@ public struct ShippingMethod: Codable, JSONEncodable, Hashable {
     public static let minimumTimeSendingRule = NumericRule<Int>(minimum: 0, exclusiveMinimum: false, maximum: 32767, exclusiveMaximum: false, multipleOf: nil)
     public static let maximumTimeSendingRule = NumericRule<Int>(minimum: 0, exclusiveMinimum: false, maximum: 32767, exclusiveMaximum: false, multipleOf: nil)
     public var id: Int
-    /** نام روش/گزینه بسته‌بندی */
+    /** نام روش ارسال */
     public var name: String
-    /** شناسه روش ارسال برای استفاده در سفارش */
+    /** توضیحات روش ارسال و جزئیات تحویل آن */
     public var description: String?
-    /** شناسه وضعیت ارسال از دیجی اکسپرس  * `1` - سایر * `2` - دیجی اکسپرس */
+    /** نوع روش ارسال: عادی یا دیجی اکسپرس  * `1` - سایر * `2` - دیجی اکسپرس */
     public var shippingType: ShippingTypeEnum?
     public var getShippingTypeDisplay: String
     public var shippingTypeDisplay: String
-    /** هزینه ارسال برای منطقه اصلی (مثلاً تهران) به تومان */
+    /** هزینه ارسال برای منطقه اولیه (مثلاً تهران) به تومان */
     public var cost: Int?
     /** هزینه ارسال برای مناطق دیگر به تومان */
     public var secondaryCost: Int?
-    /** حداقل تعداد روز از تاریخ سفارش تا تحویل */
+    /** حداقل تعداد روزها از تاریخ سفارش تا تحویل */
     public var minimumTimeSending: Int?
-    /** Maximum number of days from order date to delivery */
+    /** حداکثر تعداد روزها از تاریخ سفارش تا تحویل */
     public var maximumTimeSending: Int?
     public var deliveryTimeDisplay: String
     public var deliveryTimeRangeDisplay: DeliveryTimeRangeDisplay
     public var inventoryAddress: BusinessAddress
-    /** آیا روش ارسال پرداخت در مقصد است */
+    /** Whether the shipping method is pay at destination */
     public var isPayAtDestination: Bool?
 
     public init(id: Int, name: String, description: String? = nil, shippingType: ShippingTypeEnum? = nil, getShippingTypeDisplay: String, shippingTypeDisplay: String, cost: Int? = nil, secondaryCost: Int? = nil, minimumTimeSending: Int? = nil, maximumTimeSending: Int? = nil, deliveryTimeDisplay: String, deliveryTimeRangeDisplay: DeliveryTimeRangeDisplay, inventoryAddress: BusinessAddress, isPayAtDestination: Bool? = nil) {

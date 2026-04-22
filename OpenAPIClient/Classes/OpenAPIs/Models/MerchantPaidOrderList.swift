@@ -16,7 +16,7 @@ public struct MerchantPaidOrderList: Codable, JSONEncodable, Hashable {
     public var orderUuid: UUID
     /** شناسه منحصر به فرد سفارش در سیستم فروشنده */
     public var merchantOrderId: String
-    /** شناسه منحصر به فرد برای پذیرنده برای تأیید سفارش */
+    /** شناسه منحصر به فرد فروشنده برای تأیید سفارش */
     public var merchantUniqueId: String
     public var paidAt: Date?
     public var refundsAt: Date?

@@ -13,9 +13,9 @@ import AnyCodable
 public struct WalletBalance: Codable, JSONEncodable, Hashable {
 
     public static let amountRule = NumericRule<Int>(minimum: -2147483648, exclusiveMinimum: false, maximum: 2147483647, exclusiveMaximum: false, multipleOf: nil)
-    /** موجودی کیف پول فعلی (برحسب تومان) */
+    /** Current wallet balance in Tomans */
     public var amount: Int?
-    /** مهلت تسویه تراز منفی */
+    /** Deadline for settling negative balance */
     public var negativeSettlementDeadline: String?
 
     public init(amount: Int? = nil, negativeSettlementDeadline: String?) {

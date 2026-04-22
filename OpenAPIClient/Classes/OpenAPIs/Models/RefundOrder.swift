@@ -14,7 +14,7 @@ import AnyCodable
 public struct RefundOrder: Codable, JSONEncodable, Hashable {
 
     public static let reasonRule = StringRule(minLength: nil, maxLength: 500, pattern: nil)
-    /** دلیل اختیاری برای بازگرداندن وجه */
+    /** Optional reason for the refund */
     public var reason: String?
 
     public init(reason: String? = nil) {
